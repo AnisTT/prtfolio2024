@@ -203,42 +203,52 @@ const ShaderMaterial = ({
     }
     lastFrameTime = timestamp;
 
-    const material: any = ref.current.material;
-    const timeLocation = material.uniforms.u_time;
+    const material = Array.isArray(ref.current.material) ? ref.current.material[0] : ref.current.material;
+    const timeLocation = (material as THREE.ShaderMaterial).uniforms.u_time;
     timeLocation.value = timestamp;
   });
 
-  const getUniforms = () => {
-    const preparedUniforms: any = {};
-
+  interface Uniform {
+    type: string;
+    value: any;
+  }
+  
+  interface PreparedUniform {
+    value: any;
+    type: string;
+  }
+  
+  const getUniforms = (uniforms: { [key: string]: Uniform }) => {
+    const preparedUniforms: { [key: string]: PreparedUniform } = {};
+  
     for (const uniformName in uniforms) {
-      const uniform: any = uniforms[uniformName];
-
+      const uniform = uniforms[uniformName];
+  
       switch (uniform.type) {
-        case "uniform1f":
-          preparedUniforms[uniformName] = { value: uniform.value, type: "1f" };
+        case 'uniform1f':
+          preparedUniforms[uniformName] = { value: uniform.value, type: '1f' };
           break;
-        case "uniform3f":
+        case 'uniform3f':
           preparedUniforms[uniformName] = {
             value: new THREE.Vector3().fromArray(uniform.value),
-            type: "3f",
+            type: '3f',
           };
           break;
-        case "uniform1fv":
-          preparedUniforms[uniformName] = { value: uniform.value, type: "1fv" };
+        case 'uniform1fv':
+          preparedUniforms[uniformName] = { value: uniform.value, type: '1fv' };
           break;
-        case "uniform3fv":
+        case 'uniform3fv':
           preparedUniforms[uniformName] = {
             value: uniform.value.map((v: number[]) =>
               new THREE.Vector3().fromArray(v)
             ),
-            type: "3fv",
+            type: '3fv',
           };
           break;
-        case "uniform2f":
+        case 'uniform2f':
           preparedUniforms[uniformName] = {
             value: new THREE.Vector2().fromArray(uniform.value),
-            type: "2f",
+            type: '2f',
           };
           break;
         default:
@@ -250,6 +260,7 @@ const ShaderMaterial = ({
     preparedUniforms["u_time"] = { value: 0, type: "1f" };
     preparedUniforms["u_resolution"] = {
       value: new THREE.Vector2(size.width * 2, size.height * 2),
+      type: '2f',
     }; // Initialize u_resolution
     return preparedUniforms;
   };
@@ -271,7 +282,7 @@ const ShaderMaterial = ({
       }
       `,
       fragmentShader: source,
-      uniforms: getUniforms(),
+      uniforms: getUniforms(uniforms),
       glslVersion: THREE.GLSL3,
       blending: THREE.CustomBlending,
       blendSrc: THREE.SrcAlphaFactor,
