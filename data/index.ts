@@ -1,8 +1,8 @@
-import { img } from "framer-motion/client";
+import { link } from "fs";
 
 export const navItems = [
     { name: "About", link: "#about",  },
-    { name: "Projects", link: "#RecentProjects" },
+    { name: "Projects", link: "#project" },
     { name: "Testimonials", link: "#testimonials" },
     { name: "Contact", link: "#contact" },
   ];
@@ -10,43 +10,43 @@ export const navItems = [
   export const gridItems = [
     {
       id: 1,
-      title: "I prioritize client collaboration, fostering open communication ",
+      title: "Strong Mathematical Foundation and Analytical Skills",
       description: "",
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
       imgClassName: "w-full h-full",
       titleClassName: "justify-end",
-      img: "/b1.svg",
-      spareImg: "",
+      img: "/math.svg", // Image representing mathematical concepts
+      spareImg: "", // Added spare image
     },
     {
       id: 2,
-      title: "I'm very flexible with time zone communications",
+      title: "Commitment to Client Collaboration and Communication",
       description: "",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-      imgClassName: "",
+      imgClassName: "w-full h-auto",
       titleClassName: "justify-start",
-      img: "",
-      spareImg: "",
+      img: "", 
+      spareImg: "", 
     },
     {
       id: 3,
-      title: "My tech stack",
-      description: "I constantly try to improve",
+      title: "Continuous Improvement of My Tech Stack",
+      description: "I am dedicated to expanding my technical expertise by continuously improving my tech stack.",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-      imgClassName: "",
+      imgClassName: "w-full h-auto",
       titleClassName: "justify-center",
-      img: "",
-      spareImg: "",
+      img: "", // Image representing tech stack
+      spareImg: "", // Added spare image
     },
     {
       id: 4,
-      title: "Tech enthusiast with a passion for development.",
-      description: "",
+      title: "Passionate Tech Enthusiast with a Focus on Development",
+      description: "As a tech enthusiast, I am driven by a desire to innovate and improve my development skills.",
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-      imgClassName: "",
+      imgClassName: "w-full h-auto",
       titleClassName: "justify-start",
-      img: "/grid.svg",
-      spareImg: "/b4.svg",
+      img: "", // Image representing tech enthusiasm
+      spareImg: "", // Added spare image
     },
   
     {
@@ -61,7 +61,7 @@ export const navItems = [
     },
     {
       id: 6,
-      title: "Do you want to start a project together?",
+      title: "Get To Know Me More",
       description: "",
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
       imgClassName: "",
@@ -74,36 +74,29 @@ export const navItems = [
   export const projects = [
     {
       id: 1,
-      title: "3D Solar System Planets to Explore",
-      des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-      img: "/p1.svg",
+      title: "A Landing Page For A Opinion Sharing Platform",
+      des: "Share You Opinion With This Simple React Typescript Platform .",
+      img: "/pro1.png",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-      link: "/ui.earth.com",
+      link: "",
     },
     {
       id: 2,
-      title: "Yoom - Video Conferencing App",
-      des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-      img: "/p2.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-      link: "/ui.yoom.com",
+      title: "ADHD Task Manager",
+      des: "Simplify your Every Day Tasks experience with FocusFuse. Seamlessly connect with colleagues and friends.",
+      img: "/pro2.png",
+      iconLists: [ "/tail.svg", "/ts.svg", "/git.svg", "/c.svg"],
+      link: "",
     },
     {
       id: 3,
-      title: "AI Image SaaS - Canva Application",
-      des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-      img: "/p3.svg",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-      link: "/ui.aiimg.com",
+      title: "A Process/Asset Management App with React js and Flask",
+      des: "Process/Asset Management App using React.js on the frontend and Flask for the backend. This app will allow users to manage assets related to processes, monitor risks, and visualize related data.",
+      img: "/asset.png",
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/flask.svg"],
+      link: "",
     },
-    {
-      id: 4,
-      title: "Animated Apple Iphone 3D Website",
-      des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-      img: "/p4.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-      link: "/ui.apple.com",
-    },
+   
   ];
   
   export const testimonials = [
@@ -131,27 +124,27 @@ export const navItems = [
   export const companies = [
     {
       id: 1,
-      name: "cloudinary",
-      img: "/cloud.svg",
-      nameImg: "/cloudName.svg",
+      name: "Azure",
+      img: "/azure.svg",
+      nameImg: "/azurename.svg",
     },
     {
       id: 2,
-      name: "appwrite",
-      img: "/app.svg",
-      nameImg: "/appName.svg",
+      name: "react",
+      img: "/re.svg",
+      nameImg: "/reactname.png",
     },
     {
       id: 3,
-      name: "HOSTINGER",
-      img: "/host.svg",
-      nameImg: "/hostName.svg",
+      name: "tailwind",
+      img: "/tail.svg",
+      nameImg: "/tailName1.png",
     },
     {
       id: 4,
-      name: "stream",
-      img: "/s.svg",
-      nameImg: "/streamName.svg",
+      name: "typescript",
+      img: "/ts.svg",
+      nameImg: "/ts1.png",
     },
     {
       id: 5,
@@ -164,29 +157,29 @@ export const navItems = [
   export const workExperience = [
     {
       id: 1,
-      title: "Frontend Engineer Intern",
-      desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+      title: "Software Developer Intern at Tunis Stock Exchange",
+      desc: "Tunis Stock Exchange provided me with invaluable experience in applying my technical skills to realworld challenges in financial markets. Developing the web application for processes, risks, and assets management not only contributed to BVMT’s operational efficiency but also enriched my understanding of the complexities and importance of financial market infrastructure.",
       className: "md:col-span-2",
       thumbnail: "/exp1.svg",
     },
     {
       id: 2,
-      title: "Mobile App Dev - JSM Tech",
-      desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-      className: "md:col-span-2", // change to md:col-span-2
+      title: "3rd place  @ CodingMoonChallenge-Microsoft",
+      desc: "Collaborated with a team to develop an e-commerce website integrated with Open Banking API. Presented innovative solutions to streamline financial transactions and enhance user experience.",
+      className: "md:col-span-2", 
       thumbnail: "/exp2.svg",
     },
     {
       id: 3,
-      title: "Freelance App Dev Project",
-      desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-      className: "md:col-span-2", // change to md:col-span-2
+      title: "2nd Place @ Youth Speak Hackathon",
+      desc: "Implemented innovative strategies to tackle challenges related to water management and economic empowerment.",
+      className: "md:col-span-2",
       thumbnail: "/exp3.svg",
     },
     {
       id: 4,
-      title: "Lead Frontend Developer",
-      desc: "Developed and maintained user-facing features using modern frontend technologies.",
+      title: "AZ-900 Certification",
+      desc: "Earned the Azure Fundamentals certification from Microsoft",
       className: "md:col-span-2",
       thumbnail: "/exp4.svg",
     },
@@ -196,13 +189,12 @@ export const navItems = [
     {
       id: 1,
       img: "/git.svg",
+      link : "https://github.com/AnisTT"
     },
+    
     {
       id: 2,
-      img: "/twit.svg",
-    },
-    {
-      id: 3,
       img: "/link.svg",
+      link : "https://in/anis-tarhouni-trabelsi-3710b4269/"
     },
   ];

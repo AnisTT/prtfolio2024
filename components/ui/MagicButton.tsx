@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 
 const MagicButton = ({
@@ -6,10 +8,12 @@ const MagicButton = ({
     title: string;
     icon?: React.ReactNode;
     position?: 'left' | 'right';
-    handleClick?: () => void;
+
+    onClick?: () => void;
+
     otherClasses?: string;
 
-
+    
     }
 ) => {
   return (

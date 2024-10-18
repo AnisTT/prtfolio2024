@@ -4,10 +4,11 @@ import Grid from "@/components/Grid";
 import RecentProjects from "@/components/RecentProjects";
 import Clients from "@/components/Clients";
 import Experience from "@/components/Experience";
-import Footer from "@/components/Footer";
 import Approach from "@/components/Approach";
 
+
 import { navItems } from "@/data";
+import { BackgroundBoxes } from "@/components/BackgroundBoxes";
 
 export default function Home() {
   return (
@@ -20,7 +21,8 @@ export default function Home() {
         <Clients />
         <Experience />
         <Approach />
-        <Footer     />
+
+        <BackgroundBoxes />
 
       </div>
 

@@ -1,43 +1,81 @@
-import React from 'react'
-import { Spotlight } from './ui/Spotlight'
-import { TextGenerateEffect } from './ui/TextGenerateEffect '
-import MagicButton from './ui/MagicButton'
-import { FaLocationArrow } from 'react-icons/fa'
+"use client";
+
+import React from 'react';
+import dynamic from 'next/dynamic';
+import { Spotlight } from './ui/Spotlight';
+import { TextGenerateEffect } from './ui/TextGenerateEffect';
+import MagicButton from './ui/MagicButton';
+import { FaLocationArrow } from 'react-icons/fa';
+import { socialMedia } from '@/data';
+
+// Dynamically import motion from Framer Motion, disabling SSR
+const MotionImg = dynamic(() =>
+  import('framer-motion').then(mod => mod.motion.img), { ssr: false }
+);
 
 const Hero = () => {
   return (
     <div className='pb-20 pt-36'>
-        <div >
-            <Spotlight fill="white" className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" />
-            <Spotlight fill="purple" className="top-10 left-full h-[80vh] w-[50vw] " />
-            <Spotlight fill="blue" className="top-2 left-80 h-[80vh] w-[50vw]" />
+      <div>
+        <Spotlight fill="white" className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" />
+        <Spotlight fill="purple" className="top-10 left-full h-[80vh] w-[50vw]" />
+        <Spotlight fill="blue" className="top-2 left-80 h-[80vh] w-[50vw]" />
+      </div>
 
-        </div>
-        <div className="h-[50rem] w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.05] bg-grid-black/[0.2]  flex items-center justify-center absolute top-0 left-0">
-                <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
-                
-        </div>
-        <div className="flex justify-center  relative my-20 z-10 ">
-            <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-                <h2 className='uppercase tracking-widest text-xs text-center text-blue-100 max-w-80 '>
-                   Dynamic Web Developer
-                </h2>
-                <TextGenerateEffect words="I build websites that are fast, secure, and accessible" className="text-4xl md:text-5xl lg:text-6xl text-center mt-4" />
-                <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">Hi, I&apos;m Anis , A FullStack Developer based in Tunis.</p>
-                <a href="#about">
-                    <MagicButton
-                    title="Show My Work"
-                    icon={<FaLocationArrow />}
+      <div className="h-[50rem] w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.05] bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0">
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+      </div>
 
-                    position="right"
-                    otherClasses="mt-4"
-
-                    />
-                </a>
+      <div className="flex justify-center items-center md:gap-3 gap-6">
+        {socialMedia.map((info) => (
+          <a key={info.id} target='blank' href={info.link}>
+            <div
+              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+            >
+              <img src={info.img} alt="icons" width={20} height={20} />
             </div>
-        </div>
-    </div>
-  )
-}
+          </a>
+        ))}
+      </div>
 
-export default Hero
+      <div className="flex justify-center relative my-20 z-10">
+        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+          <h2 className='uppercase tracking-widest text-xs text-center text-blue-100 max-w-80'>
+            Dynamic Web Developer
+          </h2>
+
+          <TextGenerateEffect
+            words="I build websites that are fast, secure, and accessible"
+            className="text-4xl md:text-5xl lg:text-6xl text-center mt-4"
+          />
+
+          <MotionImg
+            src="/myimg.png" // Replace with your actual image path
+            alt="Anis"
+            className="w-96 h-56 mt-6 flex-col flex"
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1, ease: 'easeInOut' }}
+            whileHover={{ scale: 1.1, rotate: 5 }}
+          />
+
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+            Hi, I&apos;m Anis, A FullStack Developer based in Tunis.
+          </p>
+
+          {/* MagicButton to Download CV */}
+          <a href="#about">
+            <MagicButton
+              title="Show My Work"
+              icon={<FaLocationArrow />}
+              position="left"
+              otherClasses="mt-4"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;

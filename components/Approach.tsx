@@ -19,12 +19,12 @@ const Approach = () => {
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         {/* add des prop */}
         <Card
-          title="Planning & Strategy"
-          icon={<AceternityIcon order="Phase 1" />}
-          des="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
-          navigation, and content requirements."
-        >
+            title="Efficient Problem Solver"
+            icon={<AceternityIcon order="Phase 1" />}
+            des="I leverage my strong mathematical background and full-stack development skills 
+                to design optimal solutions for complex technical challenges. From frontend 
+                to backend, I ensure each part of the system works seamlessly."
+          >
           <CanvasRevealEffect
             animationSpeed={5.1}
             // add these classed for the border rounded overflowing -> rounded-3xl overflow-hidden
@@ -32,12 +32,13 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Development & Progress Update"
-          icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way."
-        >
+  title="High-Quality Code & Optimization"
+  icon={<AceternityIcon order="Phase 2" />}
+  des="I focus on writing clean, scalable code with performance in mind. From optimizing 
+       load times to ensuring responsive design, I make sure your application runs 
+       smoothly across all devices and platforms."
+>
+
           <CanvasRevealEffect
             animationSpeed={3}
             // change bg-black to bg-pink-900
@@ -54,12 +55,13 @@ const Approach = () => {
           {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
         </Card>
         <Card
-          title="Development & Launch"
-          icon={<AceternityIcon order="Phase 3" />}
-          des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
-        >
+        title="Innovation & Continuous Improvement"
+        icon={<AceternityIcon order="Phase 2" />}
+        des="I am constantly exploring the latest technologies and best practices to 
+            ensure your project stays ahead of the curve. I strive for continuous improvement, 
+            refining features to maximize performance and user experience."
+      >
+
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-sky-600 rounded-3xl overflow-hidden"

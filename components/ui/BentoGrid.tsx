@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { IoCopyOutline } from "react-icons/io5";
 
 // Also install this npm i --save-dev @types/react-lottie
 import Lottie from "react-lottie";
@@ -12,6 +11,7 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
+import { FaDownload } from "react-icons/fa";
 
 export const BentoGrid = ({
   className,
@@ -56,7 +56,7 @@ export const BentoGridItem = ({
   const leftLists = ["ReactJS", "Express", "Typescript"];
   const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
 
-  const [copied, setCopied] = useState(false);
+  const [copied] = useState(false);
 
   const defaultOptions = {
     loop: copied,
@@ -67,10 +67,15 @@ export const BentoGridItem = ({
     },
   };
 
-  const handleCopy = () => {
-    const text = "trabelsianis046@gmail.com";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
+  const handleDownloadCV = () => {
+    const cvUrl = '/cv.pdf'; // Replace with the actual path to your CV
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'Anis_CV.pdf';
+    console.log("mrigel") ;// The name of the file for download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -181,13 +186,15 @@ export const BentoGridItem = ({
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 
-              <MagicButton
-                title={copied ? "Email is Copied!" : "Copy my email address"}
-                icon={<IoCopyOutline />}
-                position="left"
-                handleClick={handleCopy}
-                otherClasses="!bg-[#161A31]"
-              />
+              <a href="/cv.pdf" download="Anis_CV.pdf">
+          <MagicButton
+            title="Download My CV"
+            icon={<FaDownload />} // Icon for the download action
+            position="right"
+            otherClasses="mt-4"
+            handleClick={handleDownloadCV} // Download action when clicked
+          />
+          </a>
             </div>
           )}
         </div>
