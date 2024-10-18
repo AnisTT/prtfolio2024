@@ -187,14 +187,14 @@ export const BentoGridItem = ({
               </div>
 
               <a href="/cv.pdf" download="Anis_CV.pdf">
-          <MagicButton
-            title="Download My CV"
-            icon={<FaDownload />} // Icon for the download action
-            position="right"
-            otherClasses="mt-4"
-            handleClick={handleDownloadCV} // Download action when clicked
-          />
-          </a>
+                <MagicButton
+                  title="Download My CV"
+                  icon={<FaDownload />} // Icon for the download action
+                  position="right"
+                  otherClasses="mt-4"
+                  handleClick={handleDownloadCV} // Download action when clicked
+                />
+              </a>
             </div>
           )}
         </div>
