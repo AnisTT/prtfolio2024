@@ -105,19 +105,16 @@ export const navItems = [
         "Anis is a talented and disciplined computer science student with a passion for learning and problem-solving. His quick ability to master complex concepts, coupled with his creativity and teamwork, makes him a valuable asset in both academic and personal settings. I've seen his exceptional skills firsthand in hackathons and daily life, where he consistently delivers high-quality work and fosters a positive environment. Anis is highly recommended for any team or project looking for a motivated and collaborative individual.",
       name: "Talel Galai",
       title: "Computer science student @ ISIMA | Full Stack Developer",
+      img: "/talel.jpeg",
     },
     {
       quote:
-        "Anis is a talented and disciplined computer science student with a passion for learning and problem-solving. His quick ability to master complex concepts, coupled with his creativity and teamwork, makes him a valuable asset in both academic and personal settings. I've seen his exceptional skills firsthand in hackathons and daily life, where he consistently delivers high-quality work and fosters a positive environment. Anis is highly recommended for any team or project looking for a motivated and collaborative individual.",
-      name: "Talel Galai",
-      title: "Computer science student @ ISIMA | Full Stack Developer",
+        "I’ve had the pleasure of knowing Anis for over six years. We started as study partners, working together to earn our baccalaureate diploma, and his analytical mindset has always stood out. Anis has a remarkable ability to break down complex concepts,  never turning down a request for help Throughout the years, we’ve collaborated on numerous projects, starting from high school and continuing to this day. Anis has been instrumental in helping me develop my skills in computer science and data. His dedication to teamwork is unmatched—he is serious when the situation calls for it, yet knows how to keep the atmosphere light with his sense of humor. I couldn’t ask for a better collaborator and friend.",
+      name: "Ela Boudaya",
+      title: "Mathematics and Computer Science Student Aspiring Data Scientist",
+      img: "/ELA.jpg",
     },
-    {
-      quote:
-        "Anis is a talented and disciplined computer science student with a passion for learning and problem-solving. His quick ability to master complex concepts, coupled with his creativity and teamwork, makes him a valuable asset in both academic and personal settings. I've seen his exceptional skills firsthand in hackathons and daily life, where he consistently delivers high-quality work and fosters a positive environment. Anis is highly recommended for any team or project looking for a motivated and collaborative individual.",
-      name: "Talel Galai",
-      title: "Computer science student @ ISIMA | Full Stack Developer",
-    },
+ 
     
   ];
   

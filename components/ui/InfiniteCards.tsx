@@ -11,6 +11,7 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
+    img: string | undefined;
     quote: string;
     name: string;
     title: string;
@@ -116,8 +117,9 @@ export const InfiniteMovingCards = ({
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 {/* add this div for the profile img */}
                 <div className="me-3">
-                  <img src="/talel.jpeg" alt="profile" className="w-8 h-8 md:w-12 md:h-12 rounded-full" />
+                  <img src={item.img} alt="profile" className="w-8 h-8 md:w-12 md:h-12 rounded-full" />
                 </div>
+                
                 <span className="flex flex-col gap-1">
                   {/* change text color, font-normal to font-bold, text-xl */}
                   <span className="text-xl font-bold leading-[1.6] text-white">
@@ -130,6 +132,7 @@ export const InfiniteMovingCards = ({
                 </span>
               </div>
             </blockquote>
+            
           </li>
         ))}
       </ul>

@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
 
-      <div className="absolute top-4 right-4 flex justify-center items-center md:gap-3 gap-6">
+      <div className="absolute top-4 right-5 flex justify-end items-center md:gap-3 gap-6">
         {socialMedia.map((info) => (
           <a key={info.id} target='blank' href={info.link}>
         <div
@@ -44,20 +44,33 @@ const Hero = () => {
             Dynamic Web Developer
           </h2>
 
-          <TextGenerateEffect
+          
+          
+         
+            
+          <MotionImg
+  src="/myimg (2).png" // Replace with your actual image path
+  alt="Anis"
+  className="w-56 h-44 rounded-lg shadow-lg"
+  style={{
+    maskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%)',
+    WebkitMaskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%)',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+  }}
+  initial={{ scale: 0.5, opacity: 0 }} // Start smaller
+  animate={{ scale: 1, opacity: 1 }} // Scale up to full size
+  transition={{ duration: 0.8, ease: 'easeOut' }} // Smooth transition
+  whileHover={{ scale: 1.1, rotateY: 10, boxShadow: '0 10px 20px rgba(0, 0, 0, 0.3)' }} // Flip effect on hover
+/>
+        <TextGenerateEffect
             words="I build websites that are fast, secure, and accessible"
             className="text-4xl md:text-5xl lg:text-6xl text-center mt-4"
           />
 
-          <MotionImg
-            src="/myimg.png" // Replace with your actual image path
-            alt="Anis"
-            className="w-96 h-56 mt-6 flex-col flex"
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1, ease: 'easeInOut' }}
-            whileHover={{ scale: 1.1, rotate: 5 }}
-          />
+
+          
+
+          
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi, I&apos;m Anis, A FullStack Developer based in Tunis.
