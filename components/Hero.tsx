@@ -51,7 +51,7 @@ const Hero = () => {
           <MotionImg
   src="/myimg (2).png" // Replace with your actual image path
   alt="Anis"
-  className="w-56 h-44 rounded-lg shadow-lg"
+  className="w-60 h-44 rounded-lg shadow-lg pt-4"
   style={{
     maskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%)',
     WebkitMaskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%)',
