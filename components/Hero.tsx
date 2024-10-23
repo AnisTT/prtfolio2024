@@ -12,9 +12,7 @@ import animationData from '@/data/developer.json'; // Adjust the path to your JS
 
 
 // Dynamically import motion from Framer Motion, disabling SSR
-const MotionImg = dynamic(() =>
-  import('framer-motion').then(mod => mod.motion.img), { ssr: false }
-);
+
 
 
 const Hero = () => {
