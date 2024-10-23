@@ -7,11 +7,15 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import MagicButton from './ui/MagicButton';
 import { FaLocationArrow } from 'react-icons/fa';
 import { socialMedia } from '@/data';
+import Lottie from 'lottie-react';
+import animationData from '@/data/developer.json'; // Adjust the path to your JSON animation file
+
 
 // Dynamically import motion from Framer Motion, disabling SSR
 const MotionImg = dynamic(() =>
   import('framer-motion').then(mod => mod.motion.img), { ssr: false }
 );
+
 
 const Hero = () => {
   return (
@@ -43,13 +47,18 @@ const Hero = () => {
           <h2 className='uppercase tracking-widest text-xs text-center text-blue-100 max-w-80'>
             Dynamic Web Developer
           </h2>
+          
+
+          <div className="w-60 h-60 mt-8">
+          <Lottie animationData={animationData} loop={true} />
+        </div>
 
           
           
          
             
-          <MotionImg
-  src="/myimg (2).png" // Replace with your actual image path
+          {/* <MotionImg
+  src="/myimg (2).png"
   alt="Anis"
   className="w-60 h-44 rounded-lg shadow-lg pt-4"
   style={{
@@ -61,7 +70,7 @@ const Hero = () => {
   animate={{ scale: 1, opacity: 1 }} // Scale up to full size
   transition={{ duration: 0.8, ease: 'easeOut' }} // Smooth transition
   whileHover={{ scale: 1.1, rotateY: 10, boxShadow: '0 10px 20px rgba(0, 0, 0, 0.3)' }} // Flip effect on hover
-/>
+/> */}
         <TextGenerateEffect
             words="I build websites that are fast, secure, and accessible"
             className="text-4xl md:text-5xl lg:text-6xl text-center mt-4"

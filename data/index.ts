@@ -10,17 +10,18 @@ export const navItems = [
   export const gridItems = [
     {
       id: 1,
-      title: "Strong Mathematical Foundation and Analytical Skills",
-      description: "",
-      className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-      imgClassName: "w-full h-full",
-      titleClassName: "justify-end",
-      img: "/math.svg", // Image representing mathematical concepts
-      spareImg: "", // Added spare image
+      title: "Computer Science student @ISIMa, Web Developer and Data Science enthusiast",
+      description: "Motivated Computer Science student. Eager to contribute to innovative projects", // If you want to include a description, you can add it here
+      className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]", // Adjusting grid layout
+      imgClassName: "w-full h-auto relative object-left", // Ensuring the image scales well and aligns left
+      titleClassName: " pt-5 text-m  lg:text-xl font-bold z-10 justify-end", // Title aligned to the left
+      img: "/myimg.png", // Path to your image
+      spareImg: "", // Placeholder for spare image if needed
     },
+    
     {
       id: 2,
-      title: "Commitment to Client Collaboration and Communication",
+      title: "Collaboration and Communication",
       description: "",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "w-full h-auto",

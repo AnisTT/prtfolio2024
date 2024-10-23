@@ -91,7 +91,7 @@ export const BentoGridItem = ({
     >
       {/* add img divs */}
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
-        <div className="w-full h-full absolute">
+        <div className="w-56 h-full absolute">
           {img && (
             <img
               src={img}
@@ -108,8 +108,8 @@ export const BentoGridItem = ({
             <img
               src={spareImg}
               alt={spareImg}
-              //   width={220}
-              className="object-cover object-center w-full h-full"
+            width={220}
+              className=" object-center w-full h-full"
             />
           )}
         </div>
@@ -133,10 +133,11 @@ export const BentoGridItem = ({
           {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
           {/* remove mb-2 mt-2 */}
           <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
+            className={`pl-11 font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
           >
             {title}
           </div>
+         
 
           {/* for the github 3d globe */}
           {id === 2 && <GridGlobe />}

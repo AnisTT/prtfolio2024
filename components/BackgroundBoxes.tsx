@@ -5,7 +5,7 @@ import Footer from "./Footer";
 
 export function BackgroundBoxes() {
   return (
-    <div className="h-96 relative w-full overflow-hidden  bg-black-100 flex flex-col items-center justify-center ">
+    <div className="h-96  relative w-full overflow-hidden  bg-black-100 flex flex-col items-center justify-center ">
       <div className="absolute inset-0 w-full h-full bg-black-100 z-20 [mask-image:radial-gradient(transparent,transparent)] pointer-events-none" />
 
       <Boxes />
