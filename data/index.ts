@@ -108,13 +108,7 @@ export const navItems = [
       title: "Computer science student @ ISIMA | Full Stack Developer",
       img: "/talel.jpeg",
     },
-    {
-      quote:
-        "I’ve had the pleasure of knowing Anis for over six years. We started as study partners, working together to earn our baccalaureate diploma, and his analytical mindset has always stood out. Anis has a remarkable ability to break down complex concepts,  never turning down a request for help Throughout the years, we’ve collaborated on numerous projects, starting from high school and continuing to this day. Anis has been instrumental in helping me develop my skills in computer science and data. His dedication to teamwork is unmatched—he is serious when the situation calls for it, yet knows how to keep the atmosphere light with his sense of humor. I couldn’t ask for a better collaborator and friend.",
-      name: "Ela Boudaya",
-      title: "Mathematics and Computer Science Student Aspiring Data Scientist",
-      img: "/ELA.jpg",
-    },
+   
  
     
   ];
