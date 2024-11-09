@@ -15,8 +15,7 @@ export const navItems = [
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]", // Adjusting grid layout
       imgClassName: "w-full h-auto relative object-left", // Ensuring the image scales well and aligns left
       titleClassName: " pt-5 text-m  lg:text-xl font-bold z-10 justify-end", // Title aligned to the left
-      img: "/myimg.png", // Path to your image
-      spareImg: "", // Placeholder for spare image if needed
+      img: "CSS.png", // Image representing Anis
     },
     
     {
